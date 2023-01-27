@@ -8,3 +8,13 @@
     group: "{{ ansible_user }}"
     mode: "0600"
   when: override_backup_directories | length == 0
+
+- name: Create backup of KDE config files
+  community.general.archive:
+    path: "{{ override_backup_directories }}"
+    dest: "{{ backup_dest }}/{{ backup_name }}"
+    format: "{{ backup_format }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: "0600"
+  when: override_backup_directories | length > 0
