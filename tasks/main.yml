@@ -1,2 +1,3 @@
 ---
-# tasks file for gadgieops.kde_backup_restore
+- name: Include tasks for {{ mode }}
+  ansible.builtin.include_tasks: "{{ mode }}.yml"
