@@ -1,0 +1,6 @@
+---
+- name: Restore backup
+  ansible.builtin.unarchive:
+    src: "{{ restore_file }}"
+    dest: "{{ home_directory }}"
+    remote_src: false
