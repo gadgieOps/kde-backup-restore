@@ -71,3 +71,9 @@ backup_directories:
 
 additional_directories: []
 override_backup_directories: []
+
+###
+# Restore defaults
+#
+
+restore_file: null
