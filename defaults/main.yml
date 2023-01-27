@@ -1,2 +1,73 @@
 ---
-# defaults file for gadgieops.kde_backup_restore
+###
+# mode
+# options: backup, restore
+
+mode: backup
+
+###
+# Global defaults
+#
+
+home_directory: "/home/{{ ansible_user }}"
+config_directory: "{{ home_directory }}/.config"
+share_directory: "{{ home_directory }}/.share"
+
+###
+# Backup defaults
+#
+
+backup_dest: "{{ playbook_dir }}"
+backup_format: gz
+backup_name: "kde-config-files-{{ ansible_date_time.iso8601 }}"
+
+backup_directories:
+  # Home directory backups
+  - "{{ home_directory }}/.fonts"
+  - "{{ home_directory }}/.themes"
+  - "{{ home_directory }}/.icons"
+  # user config directory backups
+  - "{{ config_directory }}/gtk-2.0"
+  - "{{ config_directory }}/gtk-3.0"
+  - "{{ config_directory }}/gtk-4.0"
+  - "{{ config_directory }}/kate"
+  - "{{ config_directory }}/Kvantum"
+  - "{{ config_directory }}/latte"
+  - "{{ config_directory }}/dolphinrc"
+  - "{{ config_directory }}/katerc"
+  - "{{ config_directory }}/konsolerc"
+  - "{{ config_directory }}/kcminputrc"
+  - "{{ config_directory }}/kdeglobals"
+  - "{{ config_directory }}/kglobalshortcutsrc"
+  - "{{ config_directory }}/klipperrc"
+  - "{{ config_directory }}/krunnerrc"
+  - "{{ config_directory }}/kscreenlockerrc"
+  - "{{ config_directory }}/ksmserverrc"
+  - "{{ config_directory }}/kwinrc"
+  - "{{ config_directory }}/kwinrulesrc"
+  - "{{ config_directory }}/plasma-org.kde.plasma.desktop.appletsrc"
+  - "{{ config_directory }}/plasmarc"
+  - "{{ config_directory }}/plasmashellrc"
+  - "{{ config_directory }}/gtkrc"
+  - "{{ config_directory }}/gtkrc-2.0"
+  - "{{ config_directory }}/lattedockrc"
+  - "{{ config_directory }}/breezerc"
+  - "{{ config_directory }}/oxygenrc"
+  - "{{ config_directory }}/lightlyrc"
+  - "{{ config_directory }}/ksplashrc"
+  - "{{ config_directory }}/khostkeysrc"
+  # user share directory backups
+  - "{{ share_directory }}/plasma"
+  - "{{ share_directory }}/kwin"
+  - "{{ share_directory }}/konsole"
+  - "{{ share_directory }}/fonts"
+  - "{{ share_directory }}/color-schemes"
+  - "{{ share_directory }}/aurorae"
+  - "{{ share_directory }}/icons"
+  - "{{ share_directory }}/wallpapers"
+  # app layout backups
+  - "{{ share_directory }}/kxmlgui5/dolphin"
+  - "{{ share_directory }}/kxmlgui5/konsole"
+
+additional_directories: []
+override_backup_directories: []
