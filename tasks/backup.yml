@@ -2,7 +2,7 @@
 - name: Create backup of KDE config files
   community.general.archive:
     path: "{{ backup_directories | union(additional_directories) }}"
-    dest: "{{ backup_dest }}/{{ backup_name }}"
+    dest: "{{ backup_dest }}/{{ backup_name }}.{{ backup_format }}"
     format: "{{ backup_format }}"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
@@ -12,7 +12,7 @@
 - name: Create backup of KDE config files
   community.general.archive:
     path: "{{ override_backup_directories }}"
-    dest: "{{ backup_dest }}/{{ backup_name }}"
+    dest: "{{ backup_dest }}/{{ backup_name }}.{{ backup_format }}"
     format: "{{ backup_format }}"
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
