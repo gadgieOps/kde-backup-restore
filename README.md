@@ -75,8 +75,8 @@ Example Playbook
         mode: backup
         backup_name: kde_backup
         additional_directories:
-          - /home/{{ ansible_user}}/.git*
-          - /home/{{ansible_user }}/.bashrc
+          - /home/{{ ansible_user }}/.git*
+          - /home/{{ ansible_user }}/.bashrc
 ~~~
 
 # Restore
@@ -101,7 +101,7 @@ Please feel free to contribute to this project by raising issues and opening pul
 
 Author Information
 ------------------
-gadgieOps
+gadgieOps   
 https://github.com/gadgieOps
 
 Special Thanks
