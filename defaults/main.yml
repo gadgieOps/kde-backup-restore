@@ -11,7 +11,7 @@ mode: backup
 
 home_directory: "/home/{{ ansible_user }}"
 config_directory: "{{ home_directory }}/.config"
-share_directory: "{{ home_directory }}/.share"
+share_directory: "{{ home_directory }}/.local/share"
 
 ###
 # Backup defaults
