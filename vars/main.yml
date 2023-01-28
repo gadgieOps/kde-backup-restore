@@ -1,11 +1,16 @@
 ---
+
+###
+# Useful documentation:
+#   - https://github.com/shalva97/kde-configuration-files
+
 backup_directories:
   # Home directory backups
   - "{{ home_directory }}/.fonts"
   - "{{ home_directory }}/.themes"
   - "{{ home_directory }}/.icons"
   # user config directory backups
-  - "{{ config_directory }}/gtk-*"
+  - "{{ config_directory }}/gtk*"
   - "{{ config_directory }}/kate"
   - "{{ config_directory }}/Kvantum"
   - "{{ config_directory }}/latte"
@@ -13,6 +18,8 @@ backup_directories:
   - "{{ config_directory }}/katerc"
   - "{{ config_directory }}/konsolerc"
   - "{{ config_directory }}/kcminputrc"
+  - "{{ config_directory }}/kcmfonts"
+  - "{{ config_directory }}/kfontinstuirc"
   - "{{ config_directory }}/kdeglobals"
   - "{{ config_directory }}/kglobalshortcutsrc"
   - "{{ config_directory }}/klipperrc"
@@ -31,6 +38,15 @@ backup_directories:
   - "{{ config_directory }}/khostkeysrc"
   - "{{ config_directory }}/konsolesshconfig"
   - "{{ config_directory }}/plasma*"
+  - "{{ config_directory }}/Trolltech.conf"
+  - "{{ config_directory }}/klaunchrc"
+  - "{{ config_directory }}/kactivitymanager*"
+  - "{{ config_directory }}/khotkeysrc"
+  - "{{ config_directory }}/kded5rc"
+  - "{{ config_directory }}/ksmserverrc"
+  - "{{ config_directory }}/ktimezonedrc"
+  - "{{ config_directory }}/kxkbrc"
+  - "{{ config_directory }}/kdeconnect"
   # user share directory backups
   - "{{ share_directory }}/plasma"
   - "{{ share_directory }}/kwin"
