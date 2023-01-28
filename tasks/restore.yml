@@ -4,3 +4,5 @@
     src: "{{ restore_file }}"
     dest: "{{ home_directory }}"
     remote_src: false
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
