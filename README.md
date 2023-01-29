@@ -13,7 +13,6 @@ I am personally only using a small subset of the capacilities of this role so pl
 Role Variables
 --------------
 
-# mode
 ~~~
 mode: backup/restore
 ~~~
