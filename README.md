@@ -8,7 +8,7 @@ Limitations
 
 At this time, this project is limited to backing up and restoring data in the users home folder only.
 
-I am personally only using a small subset of the capacilities of this playbook so please feel free to raise issues that you find in your own workflows.
+I am personally only using a small subset of the capacilities of this role so please feel free to raise issues that you find in your own workflows.
 
 Role Variables
 --------------
